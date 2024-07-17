@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Stefan" />
+    <meta
+      name="description"
+      content="During my enriching internship in Portugal, I mastered HTML and CSS, collaborating with seasoned professionals and working on real-world projects. This hands-on experience allowed me to build user-friendly interfaces, ensure responsive design, and adopt industry best practices. My time in Portugal was not only a technical learning experience but also a cultural immersion that enhanced my global perspective and communication skills. Explore my portfolio to see the projects I worked on and witness the evolution of my web development journey."
+    />
+    <meta
+      name="keywords"
+      content="portfolio, erasmus, learning, computer_science, portugal, html, css, webdesign"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link to bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- Link to css and favicon -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+    <title>Contact</title>
+  </head>
+  <body>
+    <div class="container-fluid custom_bg">
+      <!-- Container where page will go -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid text-center">
+          <a class="navbar-brand" href="#">
+            <i class="nes-icon coin is-medium"></i>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nes-btn" aria-current="page" href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nes-btn is-primary" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nes-btn is-success" href="contact.html"> Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="row text-center">
+        <h1 style="height: 2em; font-size: 3vw">Contact</h1>
+      </div>
+      <!-- !Contact Form -->
+      <div class="row justify-content-center" style="padding: 20px">
+        <div class="col-lg-6">
+          <form id="form1" action="send_email.php" method="POST">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="name@example.com"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea
+                class="form-control"
+                id="message"
+                name="message"
+                rows="3"
+                placeholder="Your Message"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="nes-btn is-primary">Send</button>
+          </form>
+        </div>
+      </div>
+      <!-- !Contact Form end -->
+      <br /><br />
+      <!-- !Radio Button Form -->
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+          <form id="contact-method-form">
+            <label>
+              <input
+                type="radio"
+                class="nes-radio"
+                name="contact"
+                value="phone"
+              />
+              <span>Phone</span>
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="nes-radio"
+                name="contact"
+                value="email"
+              />
+              <span>Email</span>
+            </label>
+          </form>
+          <div class="nes-container with-title is-centered">
+            <p id="contact-info">Please select a contact method.</p>
+          </div>
+        </div>
+      </div>
+      <!-- !Radio Button Form end -->
+      <br /><br />
+      <div class="row text-center">
+        <div class="col-12">&copy; 2024 Stefan. All rights reserved.</div>
+      </div>
+      <!--! Content ends here -->
+    </div>
+    <!--! Link to bootstrap JavaScript -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("contact-method-form");
+        const para = document.getElementById("contact-info");
+
+        form.addEventListener("change", function () {
+          const choice = form.contact.value;
+          if (choice === "phone") {
+            para.innerHTML = '<a href="tel:0741578306">0741578306</a>';
+          } else if (choice === "email") {
+            para.innerHTML =
+              '<a href="mailto:merluscastefan10@gmail.com">merluscastefan10@gmail.com</a>';
+          }
+        });
+      });
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
